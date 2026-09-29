@@ -24,3 +24,30 @@ console.log(z)
 //console.log(z)
 //const z=300
 //const y;*/
+
+let str="Java"
+console.log(str.length)
+
+let str1="Automation"
+console.log(str1.charAt(3))
+
+let b="automation testing"//case sensitive
+console.log(b.includes("testing"))
+
+let d="hello world"
+console.log(d.replace("hello","hai"))
+
+let f="Hello World"
+console.log(f.toLowerCase())
+
+let k="Hello World"
+console.log(k.toUpperCase())
+
+let m="   java  "
+console.log(m.trim())
+
+let j="helloworld"
+console.log(j.startsWith("hel"))
+
+let z="hello"
+console.log(typeof(z))

@@ -13,7 +13,8 @@ test.only('calender validation',async({page})=>{
      let attempts=10//avoid infinite loop
      while(attempts--){//multiple time attempt work cheyyan aanu loop ill edunnae
      
-     const decades=await switchbutton.innerText()//user inferface ill ulla decade fetch cheyyan aanu.nammal text aayitu aanu fetch cheyyunnae 2020-2029
+     const decades=await switchbutton.innerText()//user inferface ill ulla decade fetch cheyyan aanu
+     // .nammal text aayitu aanu fetch cheyyunnae 2020-2029
      const startyear=parseInt(decades.split('-')[0].trim())//["2020",2029]//number ill convert cheyyan aanu parsenInt method use cheyyunnae
 if(targetyear>=startyear && targetyear<=startyear+9)//one decade ill 10 years aanu ullathu.nammal start year +9 koodi aanu yadukunnae
 break

@@ -41,3 +41,7 @@ console.log(num)
 let num2=[10,2,9,5,8]
 num.sort((a,b)=>b-a)
 console.log(num2)
+
+let arr = [10, 20, 30];
+
+console.log(arr.includes()) // true

@@ -15,3 +15,20 @@ console.log(y+typeof(y))
 const z=5
 console.log(z)
 
+const promise=new Promise((resolve,reject)=>{
+let success=false
+if(success){
+    resolve("login successful")
+}
+else{
+    reject("Login failed")
+}
+})
+promise
+.then(result=>console.log(result))
+.catch(error=> console.log(error))
+.finally(()=>console.log("request finished"))
+
+
+
+

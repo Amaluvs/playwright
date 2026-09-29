@@ -1,3 +1,4 @@
+/*
 //1.basic prgm
 class Parent
 {
@@ -118,4 +119,142 @@ class Child3 extends Parent3 {
 
 let p1 = new Child3();
 p1.show()
-console.log("**************************************")
+console.log("**************************************")*/
+
+class Student {
+    #name = "Anu";
+
+    getName() {
+        return this.#name;
+    }
+}
+
+let s = new Student();
+
+console.log(s.getName());
+//console.log(s.#name)  //not possible
+console.log("*****************************************");
+//prgm2
+class Student1 {
+    #name;
+
+    constructor(name) {
+        this.#name = name;
+    }
+
+    getName() {
+        return this.#name;
+    }
+
+    setName(newName) {
+        this.#name = newName;
+        //console.log(this.#name+" name")
+    }
+}
+
+let s1 = new Student1("Anu");
+
+console.log(s1.getName());
+
+s1.setName("Rahul");
+
+console.log(s1.getName());
+console.log("*****************************************");
+
+//prgm3
+
+class Employee {
+    #salary;
+
+    constructor(salary) {
+        this.#salary = salary;
+    }
+
+    getSalary() {
+        return this.#salary;
+    }
+
+    setSalary(newSalary) {
+        this.#salary = newSalary;
+    }
+}
+
+let emp = new Employee(50000);
+
+console.log(emp.getSalary());
+
+emp.setSalary(60000);
+
+console.log(emp.getSalary());
+console.log("************************************")
+
+//polymorphism
+class Animal {
+    sound() {
+        console.log("Animal makes a sound");
+    }
+}
+
+class Dog extends Animal {
+    sound() {
+        console.log("Dog barks");
+    }
+}
+
+let d = new Dog();
+d.sound();
+console.log("************************************")
+
+//prgm2
+class Person1 {
+    greet(name) {
+        console.log("Hello " + name);
+    }
+}
+
+class Student2 extends Person1 {
+    greet(name) {
+        console.log("Welcome " + name);
+    }
+}
+
+let s2 = new Student2();
+
+s2.greet("Anu");
+console.log("************************************")
+
+//super
+class Animal1 {
+    sound() {
+        console.log("Animal Sound");
+    }
+}
+
+class Dog1 extends Animal1 {
+    sound() {
+        super.sound();
+        console.log("Dog Barks");
+    }
+}
+
+let dog1 = new Dog1();
+
+dog1.sound();
+console.log("************************************")
+class Animal3{
+    sound(animalName) {
+        console.log(animalName + " makes a sound");
+    }
+}
+
+class Dog3 extends Animal3 {
+    sound(animalName) {
+        super.sound(animalName);   // Calls parent class method
+        console.log(animalName + " barks");
+    }
+}
+
+let dog3 = new Dog3();
+
+dog3.sound("Dog");
+console.log("************************************")

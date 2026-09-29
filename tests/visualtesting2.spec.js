@@ -6,6 +6,9 @@ await page.waitForLoadState('networkidle')
 await page.locator("//div[@id='carouselExampleIndicators']").evaluate((element)=>{
     //evalutae-code run cheyyan aanu evaluate kodutae
     //evaluate is used to remove unwanted UI changes before taking screenshot.”
+   // evaluate() allows us to execute JavaScript code in the browser context.
+
+//The element parameter represents the HTML element found by the locator.
     element.style.display='none'//Hide the element from the page”
     //element-The HTML element you selected
     //style- Used to change CSS style
